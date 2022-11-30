@@ -1,5 +1,6 @@
 # k8-s-on-ubuntu-20
 
+
 Please Apply Control.sh on cluster control node and worker.sh on worker nodes 
 
 After running control.sh please apply the below command to allow your user to talk to Kubernetes socket 
@@ -21,8 +22,13 @@ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 
 It also shows you a command out put to join worker nodes on this cluster which looks like below 
 
-`kubeadm join 192.168.31.75:6443 --token 04uwye.mcbu1o1odxyxfomy --discovery-token-ca-cert-hash sha256:33931d238d60544414a8bdf87b3beddc999e805ae75b1cb31bbec9c5bd5cf5fe`
+`sudo kubeadm join 192.168.31.75:6443 --token 04uwye.mcbu1o1odxyxfomy --discovery-token-ca-cert-hash sha256:33931d238d60544414a8bdf87b3beddc999e805ae75b1cb31bbec9c5bd5cf5fe`
 
+if you somehow forgot to copy the kubeadm join command then the below command will print you a new one  use this with sudo 
+
+```
+sudo kubeadm token create --print-join-command
+```
 
 Copy the above command in a note pad file 
 
