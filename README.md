@@ -10,7 +10,7 @@ mkdir -p $HOME/.kube
 
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 
-sudo chown $(id -u):$(id -g) $HOME/.kube/config
+; sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 
 It also shows you a command out put to join worker nodes on this cluster which looks like below 
