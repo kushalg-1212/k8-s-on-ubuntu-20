@@ -3,9 +3,13 @@
 Please Apply Control.sh on cluster control node and worker.sh on worker nodes 
 
 After running control.sh please apply the below command to allow your user to talk to Kubernetes socket 
+
 mkdir -p $HOME/.kube
+
 mkdir -p $HOME/.kube
+
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 
