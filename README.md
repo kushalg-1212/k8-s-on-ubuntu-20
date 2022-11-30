@@ -41,7 +41,7 @@ enter the below command to apply CNI (CNI is required by cluster control and pod
 
 once CNI is installed go ahead and run the worker.sh script in worker nodes , once installation is done paste the kubeadm join command to join to the cluster
 
-# Note : Please use the both scritps with sudo ,  and grant execution permission by doing chmod +X control.sh and chmod +x worker.sh 
+# Note : Please use the both scritps with sudo ,  and grant execution permission by doing chmod +X control.sh and chmod +x worker.sh . Also it is recomended to permanenetly disable swap by commenting the swap.img line on /etc/fstab 
 
 
 The script is self explanotory , each line is a command 
